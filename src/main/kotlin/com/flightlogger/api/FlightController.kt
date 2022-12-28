@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/flight")
+@CrossOrigin(origins = arrayOf("http://localhost:3000"))
 class FlightController(val fLightService: FlightService) {
     @GetMapping
     fun getAllFlights(): List<FlightDto> {

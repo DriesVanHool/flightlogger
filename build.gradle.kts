@@ -26,10 +26,11 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.hibernate.validator:hibernate-validator:8.0.0.Final")
+	testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("com.h2database:h2:2.1.214")
-	testImplementation("io.rest-assured:rest-assured:5.3.0")
+	implementation("io.rest-assured:kotlin-extensions:5.3.0")
 	implementation("org.springdoc:springdoc-openapi-ui:1.6.14")
 	implementation("org.springframework.boot:spring-boot-starter-actuator:3.0.1")
 }
