@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 
 class FlightDto(
     val id: Int,
-    val departureTime: LocalDateTime,
+    val departureTime: LocalDateTime?,
     val departureAirport: AirportDto,
     val arrivalTime: LocalDateTime,
     val arrivalAirport: AirportDto,

@@ -7,13 +7,13 @@ import org.springframework.format.annotation.DateTimeFormat
 import java.time.LocalDateTime
 
 class ManageFlightDto (
-    @NotEmpty(message = "Missing departure time")
-    val departureTime: LocalDateTime,
-    @PositiveOrZero(message = "Misssing departure airport")
+    @field:NotNull(message = "Missing departure time")
+    val departureTime: LocalDateTime?,
+    @field:PositiveOrZero(message = "Misssing departure airport")
     val departureAirportId: Int,
     val arrivalTime: LocalDateTime,
     val arrivalAirportId: Int,
-    @PositiveOrZero(message = "Misssing aircraft")
+    @field:PositiveOrZero(message = "Misssing aircraft")
     val aircraftId: Int,
     val remark: String
 )

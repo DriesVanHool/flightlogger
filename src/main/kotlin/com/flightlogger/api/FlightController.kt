@@ -3,6 +3,7 @@ package com.flightlogger.api
 import com.flightlogger.api.dtos.FlightDto
 import com.flightlogger.api.dtos.ManageFlightDto
 import com.flightlogger.services.FlightService
+import jakarta.validation.Valid
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.*
@@ -18,7 +19,7 @@ class FlightController(val fLightService: FlightService) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun addFlight(@RequestBody flight: ManageFlightDto): FlightDto {
+    fun addFlight(@Valid @RequestBody flight: ManageFlightDto): FlightDto {
         return fLightService.addFlight(flight)
     }
 
