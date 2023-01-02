@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface AircraftRepository : JpaRepository<Aircraft, Int> {
-    fun findAircraftById(id:Int):Aircraft?
+    fun findAircraftById(id:Int?):Aircraft?
 }

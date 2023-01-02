@@ -15,7 +15,7 @@ class Flight(
     var departureAirport: Airport = Airport(),
 
     @Column(name = "arrival_time")
-    var arrivalTime: LocalDateTime = LocalDateTime.now(),
+    var arrivalTime: LocalDateTime? = LocalDateTime.now(),
 
     @ManyToOne
     @JoinColumn(name = "arrival_id")
